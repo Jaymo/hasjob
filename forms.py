@@ -34,7 +34,7 @@ class ListingForm(Form):
     job_type = RadioField("Type", coerce=int, validators=[Required("The job type must be specified")])
     job_category = RadioField("Category", coerce=int, validators=[Required("Select a category")])
     job_location = TextField("Location",
-        description=u'“Bangalore”, “Chennai”, “Pune”, etc or “Anywhere” (without quotes)',
+        description=u'“Accra”, “Kumasi”, “Takoradi”, etc or “Anywhere” (without quotes)',
         validators=[Required(u"If this job doesn’t have a fixed location, use “Anywhere”")])
     job_relocation_assist = BooleanField("Relocation assistance available")
     job_description = TextAreaField("Description",
@@ -44,10 +44,10 @@ class ListingForm(Form):
     job_perks_description = TextAreaField("Describe job perks",
         description=u"Stock options, free lunch, free conference passes, etc")
     job_how_to_apply = TextAreaField("How do people apply for this job?",
-        description=u'Example: "Send a resume to kumar@company.com". '
+        description=u'Example: "Send a resume to kofi@mycompany.com". '
                     u"Don’t worry about spambots seeing your email address. "
                     u"We’ll secure it",
-        validators=[Required("HasGeek does not offer screening services. Please specify how candidates may apply")])
+        validators=[Required("Agbena job does not offer screening services. Please specify how candidates may apply")])
     company_name = TextField("Name",
         description=u"The name of the organization where the position is. "
                     u"No intermediaries or unnamed stealth startups. Use your own real name if the company isn’t named yet",
@@ -58,7 +58,7 @@ class ListingForm(Form):
         )#validators=[file_allowed(uploaded_logos, "That image type is not supported")])
     company_logo_remove = BooleanField("Remove existing logo")
     company_url = TextField("URL",
-        description = u"Example: http://www.google.com",
+        description = u"Example: http://www.addhen.org",
         validators=[optional_url])
     poster_email = EmailField("Email",
         description = u"This is where we’ll send your confirmation email. "\

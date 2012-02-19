@@ -34,7 +34,7 @@
 
   <!-- Feed and search -->
   <link rel="alternate" type="application/atom+xml"  title="All jobs – {{ config['SITE_TITLE']|e }}" href="{{ url_for('feed') }}" />
-  <link rel="search" type="application/opensearchdescription+xml" href="{{ url_for('static', filename='opensearch.xml') }}" title="HasGeek Job Search" />
+  <link rel="search" type="application/opensearchdescription+xml" href="{{ url_for('static', filename='opensearch.xml') }}" title="Agbena Job Search" />
 
   {%- if config['TYPEKIT_CODE'] %}
     <script type="text/javascript" src="//use.typekit.com/{{ config['TYPEKIT_CODE'] }}.js"></script>
@@ -45,7 +45,7 @@
 <body>
   <div id="container" class="container">
     <header>
-      <div id="site-title"><a href="{{ url_for('index') }}"><span class="has">Has</span><span class="geek">Geek</span> <span class="jobs">Job Board</span> <small class="has">β</small></a></div>
+    <div id="site-title"><a href="{{ url_for('index') }}"><span class="has"><img src="static/img/logo.png"/></span></a></div>
       <form id="search" action="{{ url_for('search') }}">
         <input type="text" placeholder="Find a job..." name="q"/>
         <input type="submit" value="Go"/>
@@ -65,11 +65,11 @@
   <footer>
     {% block footer %}
     <p>
-      The HasGeek Job Board is a service of <a href="http://hasgeek.com/">HasGeek</a>.
+    Copyright &copy; 2010 -2011 agbena.com. All Rights Reserved.
       Subscribe to <a href="{{ url_for('feed') }}">the feed</a> or follow
-      <a href="http://twitter.com/hasjob">@hasjob on Twitter</a>
-      to find out when new jobs are posted. Hosted by
-      <a href="http://e2enetworks.com/">E2E Networks</a>.
+      <a href="http://twitter.com/hasjob">@agbena on Twitter</a>
+      to find out when new jobs are posted. 
+      Powered by <a href="http://jobs.hasgeek.com"> <span class="has">Has</span><span class="geek">Geek</span> <span class="jobs">Job Board</span> <small class="has">β</a></small>
     </p>
     {% endblock %}
   </footer>

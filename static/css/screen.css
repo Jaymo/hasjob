@@ -110,11 +110,13 @@ a:hover, a:active {
 }
 
 a, a:active, a:visited {
-  color: #607890;
+  
+  text-decoration : none;
 }
 
 a:hover {
-  color: #036;
+  
+  text-decoration : underline;
 }
 
 ul, ol {
@@ -204,19 +206,19 @@ input:invalid, textarea:invalid {
 }
 
 ::-moz-selection {
-  background: #FF5E99;
+  background: #036564;
   color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #FF5E99;
+  background: #036564;
   color: #fff;
   text-shadow: none;
 }
 
 a:link {
-  -webkit-tap-highlight-color: #FF5E99;
+  -webkit-tap-highlight-color: #036564;
 }
 
 button {
@@ -270,14 +272,14 @@ button {
 /* Background textures by Rüdiger Appel from http://www.3quarks.com/en/BackgroundPattern/ */
 body {
   font-family: ff-meta-web-pro-1, ff-meta-web-pro-2, MetaPlus, arial, sans-serif;
-  background: url('/static/img/canvas.jpg?881083570');
+  background: #CCCCCC;
 }
 
 /* Header area */
 header {
   *zoom: 1;
   padding: 10px 20px;
-  background: url('/static/img/paper.jpg?884184256');
+  background: #033649;
   border-bottom: 1px solid #afafaf;
   -moz-box-shadow: -5px 1px 5px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: -5px 1px 5px rgba(0, 0, 0, 0.4);
@@ -299,6 +301,17 @@ header #sections li {
 }
 header #pitch {
   max-width: 60em;
+  color: #fff;
+}
+
+header a,a:active,a:visited {
+    color: #d7d79a;
+    text-decoration : none;
+}
+
+header a:hover {
+    color :#d7d79a;
+    text-decoration: underline;
 }
 
 #logo {
@@ -352,7 +365,7 @@ header #pitch {
   transition-duration: 1s;
 }
 #site-title a:hover, #site-title a:focus, #site-title a:active {
-  border-bottom: 5px solid #f0a40c;
+  border-bottom: 5px solid #d7d79a;
   -moz-transition-property: border-bottom;
   -webkit-transition-property: border-bottom;
   -o-transition-property: border-bottom;
@@ -390,15 +403,27 @@ footer {
 }
 
 footer {
-  background: url('/static/img/paper.jpg?884184256');
+  background: #033649;
   -moz-box-shadow: -5px -1px 5px rgba(0, 0, 0, 0.4);
   -webkit-box-shadow: -5px -1px 5px rgba(0, 0, 0, 0.4);
   -o-box-shadow: -5px -1px 5px rgba(0, 0, 0, 0.4);
   box-shadow: -5px -1px 5px rgba(0, 0, 0, 0.4);
   font-size: 100%;
-  background-color: white;
+  color : #fff;
   text-align: center;
 }
+
+footer a {
+    color: #d7d79a;
+    text-decoration : none;
+}
+
+footer a:hover {
+    color :#d7d79a;
+    text-decoration: underline;
+}
+
+
 .bp footer p, footer p {
   border-top: 1px solid #afafaf;
   padding: 10px 20px;
@@ -497,7 +522,7 @@ footer {
   clear: both;
 }
 #sheet #company-info {
-  color: #816894;
+  color: #004276;
   margin: 1em 0;
 }
 #sheet #post-meta {
@@ -833,6 +858,7 @@ footer {
   color: #444;
   vertical-align: text-bottom;
 }
+
 #sheet input[type="submit"]:hover, #guide input[type="submit"]:hover {
   background: #d6d6d6;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #d6d6d6), color-stop(100%, #c6c6c6));
@@ -919,13 +945,13 @@ footer {
 
 h1 {
   font-size: 200%;
-  color: #df5e0e;
+  color: #004276;
   margin: 0;
 }
 
 h2 {
-  font-size: 150%;
-  color: #816894;
+ font-size: 150%;
+  color: #004276;
   margin: 1em 0 0;
 }
 
@@ -1021,7 +1047,7 @@ table.listing {
 .stickie {
   font-size: 150%;
   width: 240px;
-  background: #ffffa2;
+  background: #b08bbf;
   position: relative;
   display: inline-block;
   vertical-align: top;
@@ -1104,11 +1130,13 @@ header .stickie {
   overflow: hidden;
 }
 .stickie .location {
+  color: #fff;
   top: 0.25em;
   left: 0.5em;
   width: 75%;
 }
 .stickie .company {
+  color :#fff;
   right: 0.5em;
   bottom: 0.25em;
   width: 80%;
@@ -1116,7 +1144,7 @@ header .stickie {
 }
 .stickie .new {
   font-size: 80%;
-  color: #df5e0e;
+  color: #ff0000;
   font-family: "Walter Turncoat", sans-serif;
   text-transform: lowercase;
   position: absolute;
@@ -1126,7 +1154,7 @@ header .stickie {
 
 #newpost, #filtered, #nojobs {
   font-family: "Walter Turncoat", sans-serif;
-  background-color: #f6f6f6;
+  background-color: #f6a85e;
   -moz-transition-property: background-color;
   -webkit-transition-property: background-color;
   -o-transition-property: background-color;
@@ -1149,14 +1177,14 @@ header .stickie {
 
 .stickie.special {
   font-family: "Walter Turncoat", sans-serif;
-  background-color: #f6f6f6;
+  background-color: #f6a85e;
 }
 
 #newpost textarea {
   font-family: "Architects Daughter", sans-serif;
   width: 100%;
   border: 0;
-  background-color: #f6f6f6;
+  background-color: #f6a85e;
   resize: none;
   -webkit-box-shadow: none;
   -moz-box-shadow: none;
@@ -1208,7 +1236,7 @@ header .stickie {
 
 .stickie.info {
   font-family: "Walter Turncoat", sans-serif;
-  background-color: #f6f6f6;
+  background-color: #f6a85e;
 }
 
 #main-40x {
@@ -1216,7 +1244,7 @@ header .stickie {
 }
 
 #stickie-40x {
-  background-color: #ffffa2;
+  background-color: #b08bbf;
   float: none;
   display: inline-block;
   text-align: center;

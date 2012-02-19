@@ -302,7 +302,7 @@ def confirm(hashid):
     if 'form.id' in request.form and form.validate_on_submit():
         # User has accepted terms of service. Now send email and/or wait for payment
         if not post.email_sent:
-            msg = Message(subject="Confirmation of your job listing at the HasGeek Job Board",
+            msg = Message(subject="Confirmation of your job listing at the Agbena Job Board",
                 recipients=[post.email])
             msg.body = render_template("confirm_email.md", post=post)
             msg.html = markdown(msg.body)
